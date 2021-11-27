@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+
+    <style>
+        body{
+            background: #6e6e6ed3; 
+            color: white;
+            font: arial 16 normal;
+        }
+        h1{
+            color: #37b63d;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+    <h1>País</h1>
+    De qual País voce é? <input type="text" name="txtpais" id="txtpais" placeholder="Digite um País" >
+    <input type="button" value="Verificar" onclick="resultado()">
+    <div id="res"></div>
+
+   <script>
+       function resultado() {
+           var txtpais = window.document.querySelector('input#txtpais')
+           var resultado = window.document.querySelector('div#res')
+           //var pais = txtpais.value
+           var pais = String(txtpais.value.toLocaleUpperCase())
+           
+
+             res.innerHTML = `<p>Seu país é <strong>${pais}<strong>, que cultura bacana!</p>`
+
+          if(pais == 'BRASIL') { 
+              res.innerHTML += `<p>Voce é de nacionalidade Brasileira</p>`
+          }
+          else {
+             res.innerHTML += `<p>Voce é estrangeiro</p>`
+          }
+        
+          //.value.toLocaleUpperCase();
+       }
+   </script>
+    
+</body>
+</html>
